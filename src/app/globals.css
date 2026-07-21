@@ -1,14 +1,91 @@
+/* ========== Website Color Scheme ========== */
+:root {
+  --forest-canopy: #1E3F20;
+  --mist-cloud: #F4F1EA;
+  --sandy-kahala: #D4B886;
+  --koa-wood: #4A2E1B;
+  --monstera-leaf: #3A6B35;
+  --pure-white: #FFFFFF;
+  --soft-sand: #EBE6DD;
+  --deep-taupe: #6E5848;
+}
+
 html,
 body {
-  --bs-light-rgb: 236, 236, 236;
   box-sizing: border-box;
   height: 100%;
   padding: 0;
   margin: 0;
+  background-color: var(--mist-cloud);
+  color: var(--koa-wood);
 }
 .wrapper {
   box-sizing: border-box;
   min-height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+/* ========== Typography ========== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--forest-canopy);
+  font-weight: 700;
+}
+
+p, span, div {
+  color: var(--koa-wood);
+}
+
+.text-muted-custom {
+  color: var(--deep-taupe) !important;
+}
+
+/* ========== Navbar Styling ========== */
+.custom-navbar {
+  background-color: var(--forest-canopy);
+}
+
+.custom-navbar .nav-link,
+.custom-navbar .navbar-brand {
+  color: var(--mist-cloud);
+  font-weight: 700;
+}
+
+.custom-navbar .nav-link:hover,
+.custom-navbar .navbar-brand:hover {
+  color: var(--sandy-kahala);
+  transition: ease-in-out 0.2s;
+}
+
+.custom-navbar .nav-link.active {
+  color: var(--sandy-kahala) !important;
+}
+
+.custom-navbar .dropdown-menu {
+  background-color: var(--forest-canopy);
+  border: 1px solid rgba(212, 184, 134, 0.4); 
+}
+
+.custom-navbar .dropdown-item {
+  color: var(--mist-cloud);
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: var(--monstera-leaf);
+  color: var(--sandy-kahala);
+}
+
+.btn-header-cta .nav-link {
+  background-color: var(--sandy-kahala) !important;
+  color: var(--koa-wood) !important;
+  border-radius: 0.375rem; 
+  font-weight: 600;
+  padding: 0.5rem 1rem !important; 
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-header-cta .nav-link:hover {
+  background-color: var(--monstera-leaf) !important;
+  color: var(--mist-cloud) !important;
 }

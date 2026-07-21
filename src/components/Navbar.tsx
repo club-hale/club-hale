@@ -12,48 +12,46 @@ const NavBar: React.FC = () => {
   const currentUser = session?.user?.email;
   const role = session?.user?.role;
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar expand="lg" className="custom-navbar py-3">
       <Container>
-        <Navbar.Brand href="/">Next.js Application Template</Navbar.Brand>
+        <Navbar.Brand href="/" className="fw-bold fs-4">Club Hale</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto justify-content-start">
-            {currentUser && (
-              <>
-                <Nav.Link id="add-stuff-nav" href="/add" active={pathName === '/add'}>
-                  Add Stuff
-                </Nav.Link>
-                <Nav.Link id="list-stuff-nav" href="/list" active={pathName === '/list'}>
-                  List Stuff
-                </Nav.Link>
-              </>
-            )}
-            {currentUser && role === 'ADMIN' && (
-              <Nav.Link id="admin-stuff-nav" href="/admin" active={pathName === '/admin'}>
-                Admin
-              </Nav.Link>
-            )}
+          <Nav className="me-auto justify-content-start px-3">
+            <Nav.Link href="/directory" active={pathName === '/directory'}>
+              Browse Clubs
+            </Nav.Link>
+            <Nav.Link href="/clubAdmin" active={pathName === '/clubAdmin'}>
+              Manage Your Clubs
+            </Nav.Link>
+            <Nav.Link href="/superAdmin" active={pathName === '/superAdmin'}>
+              Admin Dashboard
+            </Nav.Link>
           </Nav>
           <Nav>
             {session ? (
-              <NavDropdown id="login-dropdown" title={currentUser}>
+              <NavDropdown id="login-dropdown" className="custom-dropdown" title={currentUser}>
                 <NavDropdown.Item id="login-dropdown-sign-out" href="/api/auth/signout">
-                  <BoxArrowRight />
+                  <BoxArrowRight className="me-2" />
                   Sign Out
                 </NavDropdown.Item>
                 <NavDropdown.Item id="login-dropdown-change-password" href="/auth/change-password">
-                  <Lock />
+                  <Lock className="me-2" />
                   Change Password
                 </NavDropdown.Item>
               </NavDropdown>
             ) : (
-              <NavDropdown id="login-dropdown" title="Login">
+              <NavDropdown 
+                id="login-dropdown" 
+                className="custom-dropdown btn-header-cta rounded px-2" 
+                title="Student Login"
+              >
                 <NavDropdown.Item id="login-dropdown-sign-in" href="/auth/signin">
-                  <PersonFill />
+                  <PersonFill className="me-2" />
                   Sign in
                 </NavDropdown.Item>
                 <NavDropdown.Item id="login-dropdown-sign-up" href="/auth/signup">
-                  <PersonPlusFill />
+                  <PersonPlusFill className="me-2" />
                   Sign up
                 </NavDropdown.Item>
               </NavDropdown>
