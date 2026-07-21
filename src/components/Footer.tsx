@@ -2,16 +2,14 @@ import { Col, Container } from 'react-bootstrap';
 
 /** The Footer appears at the bottom of every page. Rendered by the App Layout component. */
 const Footer = () => (
-  <footer className="mt-auto py-3 bg-light">
+  <footer className="mt-auto py-3 custom-footer">
     <Container>
       <Col className="text-center">
-        Department of Information and Computer Sciences
+        <span className="footer-title">Club Hale</span>
         <br />
-        University of Hawaii
+        A Club Directory for the University of Hawaii at Manoa
         <br />
-        Honolulu, HI 96822
-        <br />
-        <a href="http://ics-software-engineering.github.io/nextjs-application-template">Template Home Page</a>
+        <a href="https://club-hale.github.io/">Project Home Page</a>
       </Col>
     </Container>
   </footer>
