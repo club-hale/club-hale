@@ -19,6 +19,7 @@ body {
   background-color: var(--mist-cloud);
   color: var(--koa-wood);
 }
+
 .wrapper {
   box-sizing: border-box;
   min-height: 100%;
@@ -36,8 +37,9 @@ p, span, div {
   color: var(--koa-wood);
 }
 
-.text-muted-custom {
-  color: var(--deep-taupe) !important;
+.text-block {
+  max-width: 750px;
+  text-align: center;
 }
 
 /* ========== Navbar Styling ========== */
@@ -76,18 +78,64 @@ p, span, div {
   color: var(--sandy-kahala);
 }
 
-.btn-header-cta .nav-link {
-  background-color: var(--sandy-kahala) !important;
-  color: var(--koa-wood) !important;
-  border-radius: 0.375rem; 
+/* ========== Buttons and Interactives ========== */
+.btn-primary-custom {
+  background-color: var(--monstera-leaf);
+  color: var(--pure-white) !important;
+  border: none;
   font-weight: 600;
-  padding: 0.5rem 1rem !important; 
   transition: all 0.2s ease-in-out;
 }
 
-.btn-header-cta .nav-link:hover {
-  background-color: var(--monstera-leaf) !important;
-  color: var(--mist-cloud) !important;
+.btn-primary-custom:hover {
+  background-color: var(--forest-canopy);
+  color: var(--pure-white) !important;
+}
+
+.btn-secondary-custom {
+  background-color: transparent;
+  color: var(--forest-canopy) !important;
+  border: 2px solid var(--forest-canopy);
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary-custom:hover {
+  background-color: var(--sandy-kahala);
+  color: var(--forest-canopy) !important;
+  border-color: var(--sandy-kahala);
+}
+
+.inline-link {
+  color: var(--monstera-leaf) !important;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== Cards and Containers ========== */
+.custom-card {
+  background-color: var(--pure-white);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.custom-card-header {
+  background-color: transparent;
+  border-bottom: 2px solid rgba(212, 184, 134, 0.4); /* Warm Sand 40% opacity */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.custom-divider {
+  border-top: 2px solid rgba(212, 184, 134, 0.4);
+  margin: 2rem 0;
+  opacity: 1; /* Override Bootstrap default opacity */
 }
 
 /* ========== Footer Styling ========== */
